@@ -1,5 +1,4 @@
 /* eslint no-console: ["error", { allow: ["error"] }] */
-import memoize from 'fast-memoize'
 import fetch from 'unfetch'
 import { returnedPostData } from '../actions'
 

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { theReturnedPostData } from './../actions'
 import { getOtherFakeData } from '../shared/helpers'
 
 class FormPost extends Component {

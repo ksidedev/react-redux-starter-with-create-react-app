@@ -1,9 +1,7 @@
-import { connect } from 'react-redux'
-import { helloWorld, reset } from './../actions'
 import ChangeText from './../components/ChangeText'
 import FormPost from './../components/FormPost'
 
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 
 class Wrapper extends Component {
     render() {
