@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { ChangeTextRedux } from './../actions'
+import { ChangeTextRedux } from './../shared/actions'
 
 class Three extends Component {
 
