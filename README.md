@@ -7,7 +7,6 @@ It uses `create-react-app`
 
 ```
 
-cd react-redux-helloworld
 npm install
 npm start
 
