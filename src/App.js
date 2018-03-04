@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import Wrapper from './containers/Wrapper'
+import ChangeText from './components/ChangeText'
+import FormPost from './components/FormPost'
 
 class App extends Component {
   render() {
     return (
     	<div>
-	      <Wrapper />
+	      	<ChangeText />
+        	<FormPost />
       	</div>
     );
   }
