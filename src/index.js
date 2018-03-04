@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import { Provider } from 'react-redux'
 import { applyMiddleware, createStore } from 'redux';
-import helloReducer from './reducers'
+import helloReducer from './shared/reducers'
 import registerServiceWorker from './registerServiceWorker';
 import { logger } from 'redux-logger'
 
