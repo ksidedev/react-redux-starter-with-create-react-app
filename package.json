@@ -4,6 +4,9 @@
   "private": true,
   "homepage": "https://vaibhavmule.github.io/react-redux-helloworld",
   "dependencies": {
+    "fast-memoize": "^2.2.8",
+    "isomorphic-unfetch": "^2.0.0",
+    "node-sass-chokidar": "0.0.3",
     "prop-types": "^15.6.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
@@ -11,10 +14,8 @@
     "react-scripts": "1.0.17",
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
-    "fast-memoize": "^2.2.8",
     "snyk": "^1.62.2",
-    "unfetch": "^3.0.0",
-    "isomorphic-unfetch": "^2.0.0"
+    "unfetch": "^3.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

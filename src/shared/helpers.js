@@ -1,6 +1,6 @@
 /* eslint no-console: ["error", { allow: ["error"] }] */
 import fetch from 'unfetch'
-import { returnedPostData } from '../actions'
+import { returnedPostData } from './actions'
 
 import { endpoints } from '../constants'
 /* eslint-disable no-unused-vars */
