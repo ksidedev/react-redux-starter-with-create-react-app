@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { getOtherFakeData } from '../shared/helpers'
-import './FormPost.css'
+import './Styles/FormPost/FormPost.css'
 
 class FormPost extends Component {
 

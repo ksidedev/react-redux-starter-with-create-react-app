@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { ChangeTextRedux } from './../shared/actions'
-import './ChangeText.css'
+import './Styles/ChangeText/ChangeText.css'
 
 class Three extends Component {
 
