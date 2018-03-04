@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { ChangeTextRedux } from './../shared/actions'
+import './ChangeText.css'
 
 class Three extends Component {
 
@@ -16,10 +17,11 @@ class Three extends Component {
 
     render() {
         return(
-            <div className="previewcomponent">
-                <h5>Component 2 - Change Value</h5>
-                <span onClick={this.onSubmit}>Click me: </span>
+            <div className="previewcomponent greyBg">
+                <h5 className="heading">Component 2 - Change Value</h5>
+                <p><span onClick={this.onSubmit}>Click me: </span>
                 {this.props.ChangeTextRedux}
+                </p>
             </div>
         );
     }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { getOtherFakeData } from '../shared/helpers'
+import './FormPost.css'
 
 class FormPost extends Component {
 
@@ -27,9 +28,9 @@ class FormPost extends Component {
 
   render() {
     return (
-      <div>
+      <div className="greyBg">
       <br />
-      	<h5>Form Post: </h5>
+      	<h5 className="heading">Form Post: </h5>
         <div className="form-post">
           <form onSubmit={this.onSubmit}>
             <input
