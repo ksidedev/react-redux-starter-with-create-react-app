@@ -10,11 +10,11 @@ export default (state = initialState, action) => {
     return Object.assign({}, state, {
         ChangeTextRedux: action.hello
       })
-    case 'COMPONENT_THREE_REDUX':
+      case 'COMPONENT_THREE_REDUX':
       return Object.assign({}, state, {
         FormPostRedux: action.third
       })
-     case 'RETURNED_POST_DATA':
+      case 'RETURNED_POST_DATA':
       return Object.assign({}, state, {
         theReturnedPostData: action.options
       })
