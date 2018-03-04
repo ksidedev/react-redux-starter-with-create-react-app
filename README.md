@@ -13,7 +13,6 @@ npm start
 
 If you are using Yarn
 
-cd react-redux-helloworld
 yarn install
 yarn start
 
