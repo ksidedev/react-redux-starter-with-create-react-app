@@ -17,10 +17,10 @@ class Three extends Component {
 
     render() {
         return(
-            <div className="previewcomponent greyBg">
+            <div className="greyBg">
                 <h5 className="heading">Component 2 - Change Value</h5>
-                <p><span onClick={this.onSubmit}>Click me: </span>
-                {this.props.ChangeTextRedux}
+                <p>{this.props.ChangeTextRedux}</p>
+                <p><span className={`btn btn-primary`} onClick={this.onSubmit}>Click me: </span>
                 </p>
             </div>
         )

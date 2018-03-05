@@ -6,3 +6,6 @@
 .heading {
   display: inline-block;
   border-bottom: 2px solid #555; }
+
+.centerText {
+  text-align: center; }

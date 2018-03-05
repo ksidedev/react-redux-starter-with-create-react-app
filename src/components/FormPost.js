@@ -34,11 +34,13 @@ class FormPost extends Component {
           <form onSubmit={this.onSubmit}>
             <input
               name="name"
+              placeHolder="Name"
               ref={(input) => { this.nameInput = input }}
               value={this.props.name}
               onChange={this.onChange} />
             <input
               name="movies"
+              placeHolder="Movie Title"
               ref={(movies) => { this.moviesInput = movies }}
               value={this.props.movies}
               onChange={this.onChange} />

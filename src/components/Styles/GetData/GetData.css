@@ -10,6 +10,5 @@
 .centerText {
   text-align: center; }
 
-.btn {
-  margin-left: 5px;
-  padding: 1px 9px; }
+.previewcomponent {
+  background-color: transparent; }

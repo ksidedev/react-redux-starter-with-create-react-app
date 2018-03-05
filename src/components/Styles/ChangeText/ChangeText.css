@@ -7,5 +7,5 @@
   display: inline-block;
   border-bottom: 2px solid #555; }
 
-.previewcomponent {
-  background-color: transparent; }
+.centerText {
+  text-align: center; }

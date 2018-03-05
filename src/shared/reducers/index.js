@@ -2,6 +2,7 @@ export const initialState = {
   ChangeTextRedux: 'Hello, World!',
   FormPostRedux: 'Hello, World!',
   theReturnedPostData: {},
+  GetData: {}
 }
 
 export default (state = initialState, action) => {
@@ -17,6 +18,10 @@ export default (state = initialState, action) => {
       case 'RETURNED_POST_DATA':
       return Object.assign({}, state, {
         theReturnedPostData: action.options
+      })
+      case 'SET_DUMMY_PLAN_OPTIONS':
+      return Object.assign({}, state, {
+        GetData: action.options
       })
     default:
       return state
