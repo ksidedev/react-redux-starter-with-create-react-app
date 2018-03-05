@@ -17,8 +17,7 @@ class FormPost extends Component {
   }
 
   onChange(event) {
-    this.state.form[event.target.name] = event.target.value
-    this.setState({ form: this.state.form })
+    this.setState({ form: { name: this.nameInput.value, movies: this.moviesInput.value } })
   }
 
   onSubmit(event) {
@@ -35,10 +34,12 @@ class FormPost extends Component {
           <form onSubmit={this.onSubmit}>
             <input
               name="name"
+              ref={(input) => { this.nameInput = input }}
               value={this.props.name}
               onChange={this.onChange} />
             <input
               name="movies"
+              ref={(movies) => { this.moviesInput = movies }}
               value={this.props.movies}
               onChange={this.onChange} />
             <button className="btn btn-success" type="submit">
