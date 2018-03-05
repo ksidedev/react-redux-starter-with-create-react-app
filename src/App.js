@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import ChangeText from './components/ChangeText'
 import FormPost from './components/FormPost'
 
@@ -9,8 +9,8 @@ class App extends Component {
 	      	<ChangeText />
         	<FormPost />
       	</div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

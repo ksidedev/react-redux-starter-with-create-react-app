@@ -1,10 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
 import { Provider } from 'react-redux'
-import { applyMiddleware, createStore } from 'redux';
+import { applyMiddleware, createStore } from 'redux'
 import helloReducer from './shared/reducers'
-import registerServiceWorker from './registerServiceWorker';
+import registerServiceWorker from './registerServiceWorker'
 import { logger } from 'redux-logger'
 
 const store = createStore(
@@ -17,5 +17,5 @@ ReactDOM.render(
     <App />
   </Provider>,
 	document.getElementById('root')
-);
-registerServiceWorker();
+)
+registerServiceWorker()
