@@ -7,15 +7,12 @@ import helloReducer from './shared/reducers'
 import registerServiceWorker from './registerServiceWorker'
 import { logger } from 'redux-logger'
 
-const store = createStore(
-  helloReducer,
-  applyMiddleware(logger)
-)// this is store
+const store = createStore(helloReducer, applyMiddleware(logger)) // this is store
 
 ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
-	document.getElementById('root')
+  document.getElementById('root')
 )
 registerServiceWorker()

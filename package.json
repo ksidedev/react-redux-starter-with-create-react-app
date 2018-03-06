@@ -1,12 +1,16 @@
 {
   "name": "React_Starter",
   "version": "0.1.0",
+  "author": "Ksidedev <deji@ksidedev.com> (https://ksidedev.com)",
   "private": true,
   "dependencies": {
     "fast-memoize": "^2.2.8",
+    "husky": "^0.14.3",
     "isomorphic-unfetch": "^2.0.0",
+    "lint-staged": "^7.0.0",
     "node-sass-chokidar": "0.0.3",
     "npm-run-all": "^4.1.2",
+    "prettier": "^1.11.1",
     "prop-types": "^15.6.0",
     "react": "^16.1.1",
     "react-bootstrap": "^0.32.1",
@@ -18,12 +22,19 @@
     "snyk": "^1.62.2",
     "unfetch": "^3.0.0"
   },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  },
   "scripts": {
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
     "build-js": "react-scripts build",
     "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
+    "format": "find src -name '*.js' && '*.css'  | xargs -I{} ./node_modules/.bin/prettier --write --no-semi --single-quote {}",
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
     "eject": "react-scripts eject",

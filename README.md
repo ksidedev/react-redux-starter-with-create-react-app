@@ -1,5 +1,5 @@
-# react-redux-basic-starter
-Basic app in React and Redux & Redux logger.
+# React-Redux-Basic-Starter
+Basic react examples with Redux, Redux logger, SASS & Prettier.
 
 It uses `create-react-app`
 
@@ -12,6 +12,12 @@ npm install
 
 npm start
 ```
+
+#### Format Code
+```
+npm run format
+```
+
 #### Build for deployment
 ```
 npm run build
@@ -31,5 +37,3 @@ yarn run build
 ```
 
 open http://localhost:3000/
-
-```
