@@ -37,5 +37,3 @@ yarn run build
 ```
 
 open http://localhost:3000/
-
-```
