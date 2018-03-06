@@ -1,6 +1,6 @@
 /* eslint no-console: ["error", { allow: ["error"] }] */
 import fetch from 'unfetch'
-import { returnedPostData,setGetData } from './actions'
+import { returnedPostData, setGetData } from './actions'
 
 import { endpoints } from '../constants'
 /* eslint-disable no-unused-vars */
@@ -48,20 +48,14 @@ export function getOtherFakeData(dispatch, payload) {
     })
 }
 
-
 // Get data from JSON and pass to Redux
 
 export function getGetData(dispatch, second) {
   return fetch(sharedPlanOptionsUrl)
     .then(r => r.json())
     .then(data => {
-     
       if (data) {
-         dispatch(
-          setGetData(
-            data
-          )
-        )
+        dispatch(setGetData(data))
         return Promise.resolve()
       }
 
@@ -72,5 +66,3 @@ export function getGetData(dispatch, second) {
       return null
     })
 }
-
-

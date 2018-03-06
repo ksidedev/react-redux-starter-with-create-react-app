@@ -7,12 +7,12 @@ import './components/Styles/ChangeText/ChangeText.css'
 class App extends Component {
   render() {
     return (
-    	<div>
-    		<h3 className="centerText">React Examples</h3>
-	      	<ChangeText />
-        	<FormPost />
-        	<GetData />
-      	</div>
+      <div>
+        <h3 className="centerText">React Examples</h3>
+        <ChangeText />
+        <FormPost />
+        <GetData />
+      </div>
     )
   }
 }

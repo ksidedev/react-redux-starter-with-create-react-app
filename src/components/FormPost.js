@@ -4,8 +4,7 @@ import { getOtherFakeData } from '../shared/helpers'
 import './Styles/FormPost/FormPost.css'
 
 class FormPost extends Component {
-
-  	constructor(props: any) {
+  constructor(props: any) {
     super(props)
 
     this.state = {
@@ -17,7 +16,9 @@ class FormPost extends Component {
   }
 
   onChange(event) {
-    this.setState({ form: { name: this.nameInput.value, movies: this.moviesInput.value } })
+    this.setState({
+      form: { name: this.nameInput.value, movies: this.moviesInput.value }
+    })
   }
 
   onSubmit(event) {
@@ -28,22 +29,28 @@ class FormPost extends Component {
   render() {
     return (
       <div className="greyBg">
-      <br />
-      	<h5 className="heading">Form Post: </h5>
+        <br />
+        <h5 className="heading">Form Post: </h5>
         <div className="form-post">
           <form onSubmit={this.onSubmit}>
             <input
               name="name"
-              placeHolder="Name"
-              ref={(input) => { this.nameInput = input }}
+              placeholder="Name"
+              ref={input => {
+                this.nameInput = input
+              }}
               value={this.props.name}
-              onChange={this.onChange} />
+              onChange={this.onChange}
+            />
             <input
               name="movies"
-              placeHolder="Movie Title"
-              ref={(movies) => { this.moviesInput = movies }}
+              placeholder="Movie Title"
+              ref={movies => {
+                this.moviesInput = movies
+              }}
               value={this.props.movies}
-              onChange={this.onChange} />
+              onChange={this.onChange}
+            />
             <button className="btn btn-success" type="submit">
               Submit
             </button>
@@ -51,7 +58,7 @@ class FormPost extends Component {
           {this.props.theReturnedPostData.values && (
             <div>
               <p>
-                Name: {this.props.theReturnedPostData.values.name} -{' '}
+                Name: {this.props.theReturnedPostData.values.name} -
                 {this.props.theReturnedPostData.values.movies}
               </p>
               <p>
@@ -73,4 +80,3 @@ class FormPost extends Component {
 export default connect(state => ({
   theReturnedPostData: state.theReturnedPostData
 }))(FormPost)
-
