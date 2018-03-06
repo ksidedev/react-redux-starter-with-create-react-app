@@ -34,7 +34,7 @@
     "build-js": "react-scripts build",
     "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
-    "format": "find src -name '*.js' && '*.css'  | xargs -I{} ./node_modules/.bin/prettier --write --no-semi --single-quote {}",
+    "format": "./node_modules/.bin/prettier --write --no-semi --single-quote 'src/**/*.{js,jsx,json,css,scss}'",
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
     "eject": "react-scripts eject",
