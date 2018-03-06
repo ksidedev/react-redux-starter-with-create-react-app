@@ -1,4 +1,4 @@
-# react-redux-basic-starter
+# React-Redux-Basic-Starter
 Basic react examples with Redux, Redux logger, SASS & Prettier.
 
 It uses `create-react-app`
