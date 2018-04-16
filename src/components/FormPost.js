@@ -8,7 +8,7 @@ class FormPost extends Component {
     super(props)
 
     this.state = {
-      form: { name: '', movies: '' }
+      form: { email: '', password: '' }
     }
 
     this.onChange = this.onChange.bind(this)
@@ -17,13 +17,15 @@ class FormPost extends Component {
 
   onChange(event) {
     this.setState({
-      form: { name: this.nameInput.value, movies: this.moviesInput.value }
+      form: { email: this.emailInput.value, password: this.passwordInput.value }
     })
   }
 
   onSubmit(event) {
     event.preventDefault()
+
     getOtherFakeData(this.props.dispatch, this.state.form)
+    
   }
 
   render() {
@@ -35,34 +37,36 @@ class FormPost extends Component {
           <form onSubmit={this.onSubmit}>
             <input
               name="name"
-              placeholder="Name"
+              placeholder="email"
               ref={input => {
-                this.nameInput = input
+                this.emailInput = input
               }}
-              value={this.props.name}
               onChange={this.onChange}
             />
             <input
               name="movies"
-              placeholder="Movie Title"
+              placeholder="password"
               ref={movies => {
-                this.moviesInput = movies
+                this.passwordInput = movies
               }}
-              value={this.props.movies}
               onChange={this.onChange}
             />
             <button className="btn btn-success" type="submit">
               Submit
             </button>
           </form>
-          {this.props.theReturnedPostData.values && (
+          {this.props.theReturnedPostData.error && (
             <div>
               <p>
-                Name: {this.props.theReturnedPostData.values.name} -
-                {this.props.theReturnedPostData.values.movies}
+                {this.props.theReturnedPostData.error}
               </p>
+            </div>
+          )}
+
+          {this.props.theReturnedPostData.token && (
+            <div>
               <p>
-                Time From Backend: {this.props.theReturnedPostData.createdAt}
+               Token: {this.props.theReturnedPostData.token}
               </p>
             </div>
           )}
