@@ -3,12 +3,12 @@ const endpoints = {
 }
 
 if (process.env.NODE_ENV === 'production') {
-  endpoints.postedDataEndpoint = 'https://reqres.in/api/users'
+  endpoints.postedDataEndpoint = 'https://reqres.in/api/register'
 } else if (process.env.NODE_ENV === 'test') {
   // mock endpoints for testing
-  endpoints.postedDataEndpoint = 'https://reqres.in/api/users'
+  endpoints.postedDataEndpoint = 'https://reqres.in/api/register'
 } else {
-  endpoints.postedDataEndpoint = 'https://reqres.in/api/users'
+  endpoints.postedDataEndpoint = 'https://reqres.in/api/register'
 }
 
 export { endpoints }

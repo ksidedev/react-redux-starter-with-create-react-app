@@ -24,13 +24,12 @@ export function getOtherFakeData(dispatch, payload) {
   return fetch(endpoints.postedDataEndpoint, {
     method: 'post',
     headers: {
-      'Content-Type': 'application/json'
+      'Accept': 'application/json, text/plain, */*',
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      values: {
-        name: payload.name,
-        movies: payload.movies
-      }
+        email: payload.email,
+        password: payload.password
     })
   })
     .then(r => r.json())
