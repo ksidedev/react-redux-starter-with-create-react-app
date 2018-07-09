@@ -1,14 +1,124 @@
-.greyBg {
-  background-color: whitesmoke;
-  padding: 10px;
-  margin-top: 3px;
+.no-padding {
+	padding: 0;
 }
 
-.heading {
-  display: inline-block;
-  border-bottom: 2px solid #555;
+a:focus,a:hover {
+	text-decoration: none;
 }
 
-.centerText {
-  text-align: center;
+button {
+    background: none;
+    border: 2px solid #93b545;
+    border-radius: 8px;
+    padding: 5px 70px;
+    background-color: #93b545;
+    color: #fff;
+}
+
+input {
+    width: 96%;
+    font-size: 15px;
+    padding: 4px;
+    border: 2px solid #000;
+    max-width: 220px;
+}
+
+.dropdown button, textarea {
+    border: 2px solid #000;
+    border-radius: 0;
+
+}
+
+button:focus {
+    outline: none;
+}
+
+.inputTitle {
+    margin-top: 10px;
+}
+
+.formWrapper {
+    border-top: 2px solid #ccc;
+    padding-bottom: 16px;
+}
+
+.panel-group {
+    margin-bottom: 0;
+}
+
+.dropdown button {
+    min-width: 171px;
+    text-align: left;
+    padding: 4.5px;
+
+    .caret {
+	    position: absolute;
+	    right: 5px;
+	    top: 12px;
+	    border-top: 9px dashed;
+	    border-top: 4px solid\9;
+	    border-right: 7px solid transparent;
+	    border-left: 7px solid transparent;
+	}
+}
+
+.fileUploader {
+	ul {
+	    width: 96%;
+	    font-size: 15px;
+	    padding: 4px;
+	    border: 2px solid #000;
+	    max-width: 220px;
+
+	    li {
+		    word-break: break-all;
+		    list-style: none;
+		    padding: 0;
+		}
+	}
+
+	aside {
+	    clear: both;
+	    display: inline-block;
+	    float: left;
+	    width: 50%;
+	}
+}
+
+.upload {
+    width: 96%;
+    font-size: 15px;
+    padding: 4px;
+    border: 2px solid #000;
+    max-width: 220px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    p {
+	    margin: 0;
+	    text-align: center;
+	}
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+hr {
+    margin: 16px 0 0;
+    border-top: 2px solid #555;
+}
+
+
+.errorWrapper {
+	input {
+		border: 2px solid red;
+	}
+}
+.error {
+    font-size: 12px;
+    display: block;
+    margin-top: 8px;
+    color: red;
 }

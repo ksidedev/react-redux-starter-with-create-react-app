@@ -1,19 +1,19 @@
-export const ChangeTextRedux = hello => ({
-  type: 'COMPONENT_TWO_REDUX',
-  hello
+export const AircraftSerialNum = serialnum => ({
+  type: 'AIRCRAFT_SERIAL_NUM',
+  serialnum
 })
 
-export const FormPostRedux = third => ({
-  type: 'COMPONENT_THREE_REDUX',
-  third
+export const AircraftStartPointData = start => ({
+  type: 'AIRCRAFT_START_POINT_DATA',
+  start
 })
 
-export const returnedPostData = options => ({
-  type: 'RETURNED_POST_DATA',
-  options
+export const SelectedSendPoint = send => ({
+  type: 'SELECTED_SEND_POINT',
+  send
 })
 
-export const setGetData = options => ({
-  type: 'SET_DUMMY_PLAN_OPTIONS',
-  options
+export const SubmitPoint = point => ({
+  type: 'SUBMIT_POINT',
+  point
 })

@@ -1,0 +1,18 @@
+@import '../Global/Global.scss';
+
+.panel-heading {
+	padding: 0;
+
+	a {
+	   width: 100%;
+	    display: block;
+	    padding: 10px 15px;
+	    border-top: 2px solid #000;
+	    /* border-bottom: 2px solid #000; */
+
+	    .arrowIcon {
+		    float: right;
+		}
+	}
+}
+

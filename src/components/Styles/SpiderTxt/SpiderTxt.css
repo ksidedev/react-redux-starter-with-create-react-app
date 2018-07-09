@@ -94,3 +94,25 @@ hr {
   display: block;
   margin-top: 8px;
   color: red; }
+
+.spiderTextHeader {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc; }
+
+.SpiderTxt {
+  position: relative; }
+  .SpiderTxt .send {
+    position: absolute;
+    bottom: 0;
+    right: 0; }
+  .SpiderTxt textarea {
+    width: 100%;
+    margin: 0;
+    position: relative;
+    top: 5px;
+    height: 100px; }
+  .SpiderTxt .pointType .dropdown {
+    float: left;
+    margin-right: 30px; }
+  .SpiderTxt textarea {
+    margin-right: 30px; }

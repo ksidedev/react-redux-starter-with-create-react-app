@@ -1,27 +1,29 @@
 export const initialState = {
-  ChangeTextRedux: 'Hello, World!',
-  FormPostRedux: '',
-  theReturnedPostData: {},
-  GetData: {}
+  AircraftSerialNum: {serialNumber: ''},
+  SelectedSendPoint: {name: "Select Point Type"},
+  submitPoint: false,
+  AircraftStartPointData:{}
 }
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case 'COMPONENT_TWO_REDUX':
+    case 'AIRCRAFT_SERIAL_NUM':
       return Object.assign({}, state, {
-        ChangeTextRedux: action.hello
+        AircraftSerialNum: action.serialnum
       })
-    case 'COMPONENT_THREE_REDUX':
+
+    case 'AIRCRAFT_START_POINT_DATA':
       return Object.assign({}, state, {
-        FormPostRedux: action.third
+        AircraftStartPointData: action.start
       })
-    case 'RETURNED_POST_DATA':
+
+    case 'SELECTED_SEND_POINT':
       return Object.assign({}, state, {
-        theReturnedPostData: action.options
+        SelectedSendPoint: action.send
       })
-    case 'SET_DUMMY_PLAN_OPTIONS':
+    case 'SUBMIT_POINT':
       return Object.assign({}, state, {
-        GetData: action.options
+        SubmitPoint: action.point
       })
     default:
       return state

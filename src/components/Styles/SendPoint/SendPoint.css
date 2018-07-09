@@ -94,3 +94,18 @@ hr {
   display: block;
   margin-top: 8px;
   color: red; }
+
+.sendPoint {
+  position: relative; }
+  .sendPoint .send {
+    bottom: 0;
+    right: 0; }
+  .sendPoint textarea {
+    width: 100%;
+    margin: 0;
+    position: relative;
+    top: 5px;
+    height: 100px; }
+  .sendPoint .pointType .dropdown {
+    float: left;
+    margin-right: 30px; }

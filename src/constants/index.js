@@ -13,6 +13,3 @@ if (process.env.NODE_ENV === 'production') {
 
 export { endpoints }
 
-export const cityExceptions = {
-  something: 'here'
-}
