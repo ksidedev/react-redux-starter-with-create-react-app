@@ -1,13 +1,12 @@
-Point Wizard Front-End
+# React-Redux-Basic-Starter
+Basic react examples with Redux, Redux logger, SASS & Prettier.
 
-It uses [Create React App](https://github.com/facebook/create-react-app) under the hood.
+It uses `create-react-app`
 
-Things you need installed on your computer:
-- Latest stable [Node](https://nodejs.org/en/)
-- [NPM](https://www.npmjs.com/get-npm)
-## Running the app
-You can use NPM or Yarn
-#### Using NPM
+## Using NPM
+
+#### Run the app
+
 ```
 npm install
 
@@ -18,9 +17,23 @@ npm start
 ```
 npm run format
 ```
-`npm run format` formats the code using [Prettier](https://prettier.io/)
 
 #### Build for deployment
 ```
 npm run build
 ```
+__
+
+## Using Yarn
+
+```
+yarn install
+
+yarn start
+```
+#### Build for deployment
+```
+yarn run build
+```
+
+open http://localhost:3000/
