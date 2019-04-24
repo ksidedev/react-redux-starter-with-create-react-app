@@ -1,5 +1,3 @@
-Boilerplate code for Spidertracks micro front-end set ups
-
 # Setup
 
 1. npm install
