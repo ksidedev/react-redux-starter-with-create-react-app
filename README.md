@@ -1,4 +1,4 @@
-Starter Kit with Create React App, Redux, Jest & Enzyme Unit Tests, Styled Components.
+## Starter Kit with Create React App, Redux, Jest & Enzyme Unit Tests, Styled Components.
 
 # Setup
 
