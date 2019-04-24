@@ -1,0 +1,49 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700);
+
+* {
+  font-family: "Open Sans";
+}
+
+h1 {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 15px 0 5px 0;
+}
+
+div.style-override-example {
+  background: blue;
+}
+
+.landing-page {
+  text-align: center;
+}
+
+.landing-page-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.landing-page-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.landing-page-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,49 +1,127 @@
 {
   "name": "React_Starter",
   "version": "0.1.0",
-  "author": "Ksidedev <deji@ksidedev.com> (https://ksidedev.com)",
   "private": true,
-  "dependencies": {
-    "fast-memoize": "^2.2.8",
-    "husky": "^0.14.3",
-    "isomorphic-unfetch": "^2.0.0",
-    "lint-staged": "^7.0.0",
-    "node-sass-chokidar": "0.0.3",
-    "npm-run-all": "^4.1.2",
-    "prettier": "^1.11.1",
-    "prop-types": "^15.6.0",
-    "react": "^16.1.1",
-    "react-bootstrap": "^0.32.1",
-    "react-dom": "^16.1.1",
-    "react-redux": "^5.0.6",
-    "react-scripts": "1.0.17",
-    "redux": "^3.7.2",
-    "redux-logger": "^3.0.6",
-    "snyk": "^1.62.2",
-    "unfetch": "^3.0.0"
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,json,css}": [
-      "prettier --single-quote --write",
-      "git add"
-    ]
-  },
+  "author": "Ksidedev <deji@ksidedev.com> (https://ksidedev.com)",
+  "homepage": "./",
   "scripts": {
-    "start-js": "react-scripts start",
-    "start": "npm-run-all -p watch-css start-js",
-    "build-js": "react-scripts build",
-    "build": "npm-run-all build-css build-js",
-    "test": "react-scripts test --env=jsdom",
-    "format": "./node_modules/.bin/prettier --write --no-semi --single-quote 'src/**/*.{js,jsx,json,css,scss}'",
-    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
-    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
-    "eject": "react-scripts eject",
-    "deploy": "npm run build && gh-pages -d build",
-    "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect"
+    "start": "PORT=3001 react-app-rewired start",
+    "build": "react-app-rewired build",
+    "deploy:dev": "./scripts/deploy.sh dev",
+    "deploy:test": "./scripts/deploy.sh test",
+    "deploy:prod": "./scripts/deploy.sh prod",
+    "eject": "react-app-rewired eject",
+    "lint": "./node_modules/.bin/eslint ./",
+    "lint:js": "./node_modules/.bin/eslint ./ --fix --quiet",
+    "test": "jest ./src/** exit 0",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch",
+    "precommit": "npm run lint",
+    "prepush": "npm run test:coverage"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie < 11",
+    "not op_mini all"
+  ],
+  "dependencies": {
+    "@google/markerclusterer": "1.0.3",
+    "@h21-map/google-infobox": "1.0.7",
+    "@material-ui/core": "3.1.0",
+    "@material-ui/icons": "3.0.1",
+    "antd": "3.12.4",
+    "deep-object-diff": "1.1.0",
+    "es6-promise": "4.2.6",
+    "history": "4.7.2",
+    "lint-staged": "8.0.4",
+    "moment": "2.22.2",
+    "moment-timezone": "0.5.23",
+    "polished": "2.3.1",
+    "prop-types": "15.6.2",
+    "react": "16.6.0",
+    "react-app-rewire-scss": "1.0.2",
+    "react-app-rewired": "1.6.2",
+    "react-body-classname": "1.2.0",
+    "react-dom": "16.6.0",
+    "react-load-script": "0.0.6",
+    "react-redux": "5.0.6",
+    "react-router-dom": "4.2.2",
+    "react-router-redux": "5.0.0-alpha.9",
+    "react-scripts": "2.1.1",
+    "redux": "3.7.2",
+    "redux-actions": "2.6.4",
+    "redux-devtools-extension": "2.13.5",
+    "redux-logger": "3.0.6",
+    "redux-thunk": "2.3.0",
+    "unfetch": "3.0.0",
+    "styled-components": "4.2.0"
   },
   "devDependencies": {
-    "gh-pages": "^1.0.0"
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.3",
+    "babel-eslint": "9.0.0",
+    "babel-jest": "23.6.0",
+    "babel-plugin-import": "1.11.0",
+    "babel-preset-env": "1.7.0",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-stage-0": "6.24.1",
+    "enzyme": "3.6.0",
+    "enzyme-adapter-react-16": "1.5.0",
+    "enzyme-to-json": "3.3.4",
+    "eslint": "5.6.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jsx-a11y": "6.1.1",
+    "eslint-plugin-react": "7.11.1",
+    "husky": "0.14.3",
+    "jest": "23.6.0",
+    "jest-fetch-mock": "2.1.0",
+    "jest-localstorage-mock": "2.4.0",
+    "jest-sonar-reporter": "2.0.0",
+    "jest-styled-components": "6.3.1",
+    "react-app-rewire-react-svg-loader": "1.0.1",
+    "react-test-renderer": "16.6.1",
+    "redux-mock-store": "1.5.3",
+    "terser": "3.14.1"
   },
-  "snyk": true
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "<rootDir>/src/**/*.{js,jsx,mjs}"
+    ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/src/index.js",
+      "<rootDir>/src/serviceWorker.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 0,
+        "functions": 4,
+        "lines": 5,
+        "statements": 4
+      }
+    },
+    "setupFiles": [
+      "<rootDir>/config/jest/jestSetup.js",
+      "<rootDir>/node_modules/regenerator-runtime/runtime"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/build",
+      "<rootDir>/public",
+      "<rootDir>/scripts",
+      "<rootDir>/src/index.js",
+      "<rootDir>/src/serviceWorker.js"
+    ],
+    "transform": {
+      "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+      "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+    },
+    "verbose": true
+  }
 }

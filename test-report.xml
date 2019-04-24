@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="/Users/dejibeckley/Sites/Spidertracks-go/untitled folder/fe.boilerplate/src/components/helloworld/__tests__/HelloWorld.spec.js">
+    <testCase name="it works" duration="16"/>
+  </file>
+</testExecutions>

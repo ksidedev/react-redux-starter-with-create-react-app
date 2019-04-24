@@ -1,39 +1,74 @@
-# React-Redux-Basic-Starter
-Basic react examples with Redux, Redux logger, SASS & Prettier.
+Boilerplate code for Spidertracks micro front-end set ups
 
-It uses `create-react-app`
+# Setup
 
-## Using NPM
+1. npm install
+2. npm start
 
-#### Run the app
+## Tooling
 
-```
-npm install
+* config
+* scripts
 
-npm start
-```
+### config
 
-#### Format Code
-```
-npm run format
-```
+Contains files with variables specific to different environments (eg API endpoints, API keys) in JSON format.
 
-#### Build for deployment
-```
-npm run build
-```
-__
+## What's inside the src directory?
 
-## Using Yarn
+* api
+* common
+* containers
+* components
+* redux
+* assets
+* utils
+* test
+* lint
 
-```
-yarn install
+### api
 
-yarn start
-```
-#### Build for deployment
-```
-yarn run build
-```
+simple fetch example
 
-open http://localhost:3000/
+### common
+
+has constants and helpers files
+
+### containers
+
+higher orchestraction component
+NB: also nests styles folder*
+
+### components
+
+simple dummy components
+NB: also nests styles folder*
+
+### redux
+
+has action and reducers
+
+### assets
+
+stores any images, SVGs, fonts
+
+### utils
+
+utils methods for containers and components
+
+### test and lint
+
+as specified
+
+### styles
+
+any container and component styles
+
+**Folder structure:**
+
+* js (styled components)
+* scss
+
+## What's not included
+
+* routes
