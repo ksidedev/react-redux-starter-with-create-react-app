@@ -1,5 +1,3 @@
-Boilerplate code for Spidertracks micro front-end set ups
-
 # Setup
 
 1. npm install
@@ -8,7 +6,6 @@ Boilerplate code for Spidertracks micro front-end set ups
 ## Tooling
 
 * config
-* scripts
 
 ### config
 
@@ -68,7 +65,3 @@ any container and component styles
 
 * js (styled components)
 * scss
-
-## What's not included
-
-* routes
