@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './redux/store';
-import LandingPage from './containers/landing/LandingPage';
+import LandingPage from './containers/landing/LandingPageContainer';
 import * as serviceWorker from './serviceWorker';
 
 const target = document.getElementById('root');

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { getData, postData, putData } from '../../api/api';
 
-class HelloWorld extends Component {
+class RequestData extends Component {
   constructor(props) {
     super(props);
     this.getFetchExample = this.getFetchExample.bind(this);
@@ -16,7 +16,7 @@ class HelloWorld extends Component {
     this.getData = getData();
   }
 
-  postFetchExample(event) {
+  postFetchExample = (event) => {
     event.preventDefault();
     this.postData = postData();
   }
@@ -38,11 +38,11 @@ class HelloWorld extends Component {
   }
 }
 
-HelloWorld.defaultProps = {
+RequestData.defaultProps = {
   className: '',
 };
 
-HelloWorld.propTypes = {
+RequestData.propTypes = {
   className: PropTypes.string,
 };
 
@@ -50,4 +50,4 @@ const HelloWorldToProps = state => ({
   HelloWorldDefaultText: state.HelloWorld.HelloWorldDefaultText,
 });
 
-export default connect(HelloWorldToProps, undefined)(HelloWorld);
+export default connect(HelloWorldToProps, undefined)(RequestData);
