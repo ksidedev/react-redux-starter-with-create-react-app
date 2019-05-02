@@ -16,9 +16,9 @@ class HelloWorld extends Component {
     dispatch(helloWorldDefaultText('Text changes with redux successful.'));
   }
 
-  changeValue(event) {
+  changeValue() {
     const { dispatch } = this.props;
-    dispatch(helloWorldDefaultValue('Text two with redux successful' ));
+    dispatch(helloWorldDefaultValue('Text two with redux successful'));
   }
 
   render() {
@@ -27,12 +27,12 @@ class HelloWorld extends Component {
       <>
         <p>Update part of redux store</p>
         <div className="col-50">
-          <button onClick={this.onSubmit}> Text One</button>
+          <button type="button" onClick={this.onSubmit}> Text One</button>
           <p>{helloWorldProps}</p>
         </div>
 
         <div className="col-50">
-          <button onClick={this.changeValue}> Text Two</button>
+          <button type="button" onClick={this.changeValue}> Text Two</button>
           <p>{helloWorldValue}</p>
         </div>
       </>
@@ -43,11 +43,13 @@ class HelloWorld extends Component {
 HelloWorld.defaultProps = {
   dispatch: () => {},
   helloWorldProps: '',
+  helloWorldValue: '',
 };
 
 HelloWorld.propTypes = {
   dispatch: PropTypes.func,
   helloWorldProps: PropTypes.string,
+  helloWorldValue: PropTypes.string,
 };
 
 const HelloWorldToProps = state => ({

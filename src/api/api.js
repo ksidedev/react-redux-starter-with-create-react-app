@@ -32,7 +32,7 @@ export function postData() {
     .then(r => r.json())
     .then((data) => {
       if (data) {
-        console.log(data);
+        // console.log(data);
       }
       return Promise.reject();
     })
@@ -58,7 +58,7 @@ export function putData() {
     .then(r => r.json())
     .then((data) => {
       if (data) {
-        console.log(data);
+        // console.log(data);
       }
       return Promise.reject();
     })
