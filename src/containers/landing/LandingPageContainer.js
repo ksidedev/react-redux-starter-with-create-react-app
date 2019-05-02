@@ -27,7 +27,7 @@ const LandingPage = () => (
 
     <div className="block">
       <Header> Styled Component Example </Header>
-     </div> 
+    </div>
   </div>);
 
 export default LandingPage;

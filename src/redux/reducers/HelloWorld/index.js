@@ -1,5 +1,5 @@
 export const initialState = {
-  helloWorldDefaultText: { text: 'Text One!', value: 'Text Two'},
+  helloWorldDefaultText: { text: 'Text One!', value: 'Text Two' },
 };
 
 export default (state = initialState, action) => {
@@ -9,17 +9,17 @@ export default (state = initialState, action) => {
         ...state,
         helloWorldDefaultText: {
           text: action.text,
-          value: state.helloWorldDefaultText.value
-        }
-      }
+          value: state.helloWorldDefaultText.value,
+        },
+      };
     case 'HELLO_WORLD_DEFAULT_VALUE':
       return {
         ...state,
         helloWorldDefaultText: {
           text: state.helloWorldDefaultText.text,
-          value: action.value
-        }
-      }
+          value: action.value,
+        },
+      };
     default:
       return state;
   }
